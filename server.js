@@ -3,7 +3,9 @@ const errorHandler = require('./middleware/errorHandler');
 const app = express();
 const dontenv = require('dotenv').config();
 const port = process.env.PORT || 3000
+const connectDB = require('./config/dbConnection'); 
 
+connectDB(); // connect to the database
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
