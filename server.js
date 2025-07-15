@@ -13,6 +13,7 @@ app.listen(port, () => {
 
 app.use(express.json()); // middleware to parse JSON bodies, recv client data from the server side
 app.use("/api/contacts", require("./routes/contactRoutes"));
-
+//app.use("/api/users", require("./routes/userRoutes"));
+app.use("/api/users", require("./routes/userRoutes")); // user routes for authentication and user management
 app.use(errorHandler)
 //app.use("/:id", require("./routes/contactRoutes"));
